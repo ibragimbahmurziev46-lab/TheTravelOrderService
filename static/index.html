@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Такси — пассажиры и водители</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/">🚕 Такси</a>
+    <div class="topbar-right">
+      <a class="btn btn-ghost btn-sm" href="/register.html">Регистрация</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Заказы такси в реальном времени</h1>
+      <p>
+        Пассажир создаёт заказ — все водители моментально получают его через SSE
+        и присылают отклики с ценой и временем подачи. Пассажир выбирает лучший
+        отклик, водитель завершает поездку.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-ghost" id="dashboard-link" href="/login.html">Войти в кабинет</a>
+        <a class="btn btn-ghost" href="/register.html">Создать аккаунт</a>
+      </div>
+    </section>
+
+    <section class="features">
+      <article class="feature">
+        <h3>Пассажиру</h3>
+        <p>Создайте заказ за пару секунд и получайте отклики водителей без обновления страницы.</p>
+      </article>
+      <article class="feature">
+        <h3>Водителю</h3>
+        <p>Лента открытых заказов обновляется через SSE. Предложите цену и время подачи — один отклик на заказ.</p>
+      </article>
+      <article class="feature">
+        <h3>Честные статусы</h3>
+        <p>open → assigned → completed или cancelled. Двойное принятие отклика невозможно: второе вернёт 409.</p>
+      </article>
+    </section>
+  </main>
+
+  <script src="/js/api.js"></script>
+  <script src="/js/index.js"></script>
+</body>
+</html>

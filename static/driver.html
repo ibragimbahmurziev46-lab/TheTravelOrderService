@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Такси — кабинет водителя</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/">🚕 Такси</a>
+    <div class="topbar-right">
+      <span id="stream-status" class="stream-status">… подключение</span>
+      <span id="whoami" class="muted"></span>
+      <button class="btn btn-ghost btn-sm" type="button" data-action="logout">Выйти</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="page-head">
+      <div>
+        <h1>Кабинет водителя</h1>
+        <p class="muted">Откликайтесь на открытые заказы и завершайте назначенные поездки.</p>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="section-head">
+        <h2>Лента открытых заказов</h2>
+        <button class="btn btn-ghost btn-sm" type="button" id="refresh">Обновить</button>
+      </div>
+      <div id="feed" class="stack">
+        <p class="muted">Загрузка…</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>Мои поездки</h2>
+      </div>
+      <div id="assigned" class="stack">
+        <p class="muted">Загрузка…</p>
+      </div>
+    </section>
+  </main>
+
+  <div id="toast" class="toast" hidden></div>
+  <script src="/js/api.js"></script>
+  <script src="/js/driver.js"></script>
+</body>
+</html>

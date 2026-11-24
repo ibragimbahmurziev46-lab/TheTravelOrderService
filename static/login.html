@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Такси — вход</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/">🚕 Такси</a>
+    <div class="topbar-right">
+      <a class="btn btn-ghost btn-sm" href="/register.html">Регистрация</a>
+    </div>
+  </header>
+
+  <div class="auth-wrap">
+    <section class="auth-card">
+      <div>
+        <h1>Вход</h1>
+        <p class="muted">Введите имя пользователя и пароль.</p>
+      </div>
+
+      <form id="login-form" autocomplete="on">
+        <label class="field">
+          <span>Имя пользователя</span>
+          <input name="username" required minlength="3" maxlength="32" autocomplete="username" placeholder="ivan" />
+        </label>
+        <label class="field">
+          <span>Пароль</span>
+          <input name="password" type="password" required minlength="6" maxlength="72" autocomplete="current-password" placeholder="••••••" />
+        </label>
+        <button class="btn btn-primary" type="submit">Войти</button>
+        <p id="form-error" class="error" hidden></p>
+      </form>
+
+      <p class="auth-footer">Нет аккаунта? <a href="/register.html">Зарегистрироваться</a></p>
+    </section>
+  </div>
+
+  <div id="toast" class="toast" hidden></div>
+  <script src="/js/api.js"></script>
+  <script src="/js/login.js"></script>
+</body>
+</html>
